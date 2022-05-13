@@ -6,32 +6,33 @@
 
 <script>
     
+    // let text = 'Barack Obama';
+    // alert(`${text}\nдлина текста: ${text.length}`);
+    // console.log(`длина текста: ${text.length}`);
 
-// let text = 'Barack Obama';
-// alert(`${text}\nдлина текста: ${text.length}`);
-// console.log(`длина текста: ${text.length}`);
+    console.log(countSymbols("BarackAA Obama", "a", true));
 
-function countSymbols(string, letterIsCount, caseSensitiveEnable) {
-    let i = 0;
-    for (charNum = 0; charNum < string.length; charNum++) {
-        
-        if (caseSensitiveEnable) {
-            if (string[charNum].toLowerCase() == 
-            letterIsCount.toLowerCase()) { 
-                i++; 
-            }
+    function countSymbols(string, letterIsCount, caseSensitiveEnable) {
+        let counter = 0;
+
+        for (charNum = 0; charNum < string.length; charNum++) {
+            if (caseSensitiveEnable) {
+
+                if (string[charNum].toLowerCase() == 
+                    letterIsCount.toLowerCase()) { 
+                    counter++; 
+                }
             } else {
-            if (string[charNum] == 
-            letterIsCount) {
-                i++;
+
+                if (string[charNum] == 
+                    letterIsCount) {
+                    counter++;
+                }
             }
         }
+
+        return counter;
     }
-
-    return i;
-}
-
-console.log(countSymbols("BarackAA Obama", "a", true));
 
 </script>
 
