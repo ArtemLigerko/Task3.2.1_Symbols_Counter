@@ -11,17 +11,27 @@
 // alert(`${text}\nдлина текста: ${text.length}`);
 // console.log(`длина текста: ${text.length}`);
 
-function countSymbols(string, letterIsCount) {
+function countSymbols(string, letterIsCount, caseSensitiveEnable) {
     let i = 0;
     for (charNum = 0; charNum < string.length; charNum++) {
-        if (string[charNum] == letterIsCount) {
-            i++;
+        
+        if (caseSensitiveEnable) {
+            if (string[charNum].toLowerCase() == 
+            letterIsCount.toLowerCase()) { 
+                i++; 
+            }
+            } else {
+            if (string[charNum] == 
+            letterIsCount) {
+                i++;
+            }
         }
     }
+
     return i;
 }
 
-console.log(countSymbols("Barack Obama", "a"));
+console.log(countSymbols("BarackAA Obama", "a", true));
 
 </script>
 
