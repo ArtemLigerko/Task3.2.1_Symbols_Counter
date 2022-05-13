@@ -12,26 +12,26 @@
 
     console.log(countSymbols("BarackAA Obama", "a", true));
 
-    function countSymbols(string, letterIsCount, caseSensitiveEnable) {
-        let counter = 0;
+    function countSymbols(string, letter, caseSensitive) {
+        let i = 0;
 
-        for (charNum = 0; charNum < string.length; charNum++) {
-            if (caseSensitiveEnable) {
+        for (j = 0; j < string.length; j++) {
+            if (caseSensitive) {
 
-                if (string[charNum].toLowerCase() == 
-                    letterIsCount.toLowerCase()) { 
-                    counter++; 
+                if (string[j].toLowerCase() == 
+                    letter.toLowerCase()) { 
+                    i++; 
                 }
             } else {
 
                 if (string[charNum] == 
-                    letterIsCount) {
-                    counter++;
+                    letter) {
+                    i++;
                 }
             }
         }
 
-        return counter;
+        return i;
     }
 
 </script>
