@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Symbols counter</h1>
+
+<script>
+    
+
+// let text = 'Barack Obama';
+// alert(`${text}\nдлина текста: ${text.length}`);
+// console.log(`длина текста: ${text.length}`);
+
+function countSymbols(string, letterIsCount) {
+    let i = 0;
+    for (charNum = 0; charNum < string.length; charNum++) {
+        if (string[charNum] == letterIsCount) {
+            i++;
+        }
+    }
+    return i;
+}
+
+console.log(countSymbols("Barack Obama", "a"));
+
+</script>
+
+
+
+</body>
+</html>
